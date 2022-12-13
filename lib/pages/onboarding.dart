@@ -174,15 +174,14 @@ class _BoardingWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.5,
-            child: SvgPicture.asset(AppConstants.onBoardingSvg),
-          ),
+          // SizedBox(
+          //   height: MediaQuery.of(context).size.height * 0.5,
+          // ),
           const SizedBox(
             height: 30,
           ),
           Text(
-            "Manage your Task",
+            "Digital literacy",
             style: TextStyle(
               color: Colors.grey[800],
               fontSize: 32,
@@ -193,11 +192,12 @@ class _BoardingWidget extends StatelessWidget {
             height: 10,
           ),
           Text(
-            "Organize all your to-do's in lists and \n projects. Color tag to set them your priority and categories.",
+            "DLP is Kenya's national ICT programme that aims to improve learning"
+            " and build 21st century skills among primary school students through the use of digital technologies in education..",
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.grey[500],
-              fontSize: 16,
+              fontSize: 30,
               fontWeight: FontWeight.w400,
             ),
           )

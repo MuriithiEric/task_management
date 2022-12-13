@@ -17,6 +17,59 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        // Add a ListView to the drawer. This ensures the user can scroll
+        // through the options in the drawer if there isn't enough vertical
+        // space to fit everything.
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text('Modules'),
+            ),
+            ListTile(
+              title: const Text('Digital Literacy'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Imagination and creativity'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Critical thinking and problem solving'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Communication and collaboration'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         title: Text(
           "26, Aug 2022",
@@ -40,26 +93,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           )
         ],
-        leading: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Container(
-            width: 50,
-            height: 50,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
-            ),
-            child: InkWell(
-              onTap: () {},
-              customBorder: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(100),
-              ),
-              child: const Icon(
-                Icons.menu_rounded,
-              ),
-            ),
-          ),
-        ),
       ),
       extendBody: true,
       body: _buildBody(),
@@ -179,7 +212,7 @@ class _HomeScreenState extends State<HomeScreen> {
       children: const [
         StaggeredGridTile.count(
           crossAxisCellCount: 1,
-          mainAxisCellCount: 1.3, 
+          mainAxisCellCount: 1.3,
           child: TaskGroupContainer(
             color: Colors.pink,
             icon: Icons.menu_book_rounded,
